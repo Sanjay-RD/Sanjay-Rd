@@ -1,9 +1,16 @@
 import "./App.css";
+import Home from "./components/Home";
+import AboutMe from "./components/AboutMe";
+import Project from "./components/Project";
+import Contact from "./components/Contact";
 
 function App() {
   return (
     <div>
-      <h1>Sanjay-RD</h1>
+      <Home />
+      <AboutMe />
+      <Project />
+      <Contact />
     </div>
   );
 }
