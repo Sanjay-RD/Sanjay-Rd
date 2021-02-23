@@ -4,9 +4,12 @@ import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
+import IndividualProject from "./components/IndividualProject";
 
 import info from "./aboutInfo";
 import projectInfo from "./projectInfo";
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   const [userInfo, setUserInfo] = useState({});
@@ -16,12 +19,21 @@ function App() {
     setProjects(projectInfo);
   }, []);
   return (
-    <div>
-      <Home userInfo={userInfo} />
-      <AboutMe userInfo={userInfo} />
-      <Project projects={projects} />
-      <Contact />
-    </div>
+    <Router>
+      <Route
+        exact
+        path="/"
+        render={(props) => (
+          <React.Fragment>
+            <Home userInfo={userInfo} />
+            <AboutMe userInfo={userInfo} />
+            <Project projects={projects} />
+            <Contact />
+          </React.Fragment>
+        )}
+      />
+      <Route path="/project/:id" component={IndividualProject} />
+    </Router>
   );
 }
 

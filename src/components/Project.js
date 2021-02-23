@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Project = ({ projects }) => {
   return (
@@ -14,7 +15,7 @@ const Project = ({ projects }) => {
                 <div className="post-preview">
                   <h6 className="post-title">{project.name}</h6>
                   <p className="post-intro">{project.intro}</p>
-                  <a href="post.html">Read More</a>
+                  <Link to={`/project/${project.id}`}>Read More</Link>
                 </div>
               </div>
             </div>
