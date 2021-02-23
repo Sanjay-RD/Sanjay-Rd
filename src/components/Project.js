@@ -1,53 +1,24 @@
 import React from "react";
 
-const Project = () => {
+const Project = ({ projects }) => {
   return (
-    <section class="s1">
-      <div class="main-container">
+    <section className="s1">
+      <div className="main-container">
         <h3 style={{ textAlign: " center" }}>Some of my past projects</h3>
 
-        <div class="post-wrapper">
-          <div>
-            <div class="post">
-              <img class="thumbnail" src="images/dash.jpg" />
-              <div class="post-preview">
-                <h6 class="post-title">Laboratory Management System</h6>
-                <p class="post-intro">
-                  Designed built & mantained a the lab managment system for FOI
-                  Laboratories
-                </p>
-                <a href="post.html">Read More</a>
+        <div className="post-wrapper">
+          {projects.map((project) => (
+            <div key={project.name}>
+              <div className="post">
+                <img className="thumbnail" src={project.image} alt="" />
+                <div className="post-preview">
+                  <h6 className="post-title">{project.name}</h6>
+                  <p className="post-intro">{project.intro}</p>
+                  <a href="post.html">Read More</a>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div>
-            <div class="post">
-              <img class="thumbnail" src="images/ecom.jpg" />
-              <div class="post-preview">
-                <h6 class="post-title">Online Store - CoursePost Title</h6>
-                <p class="post-intro">
-                  Online store with paypal payments intergration and guest user
-                  shopping
-                </p>
-                <a href="post.html">Read More</a>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div class="post">
-              <img class="thumbnail" src="images/membership site.jpg" />
-              <div class="post-preview">
-                <h6 class="post-title">Membership Website</h6>
-                <p class="post-intro">
-                  Modulized guide for online courses with step by step
-                  intructions
-                </p>
-                <a href="post.html">Read More</a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -296,9 +296,10 @@ h6 {
 }
 
 #skills {
-  display: flex;
-  justify-content: space-evenly;
+  /* display: flex;
+  justify-content: space-evenly; */
   background-color: var(--previewShadow);
+  padding: 2px 0px;
 }
 
 .social-links {

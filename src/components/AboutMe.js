@@ -1,17 +1,14 @@
 import React from "react";
 
-const AboutMe = () => {
+const AboutMe = ({ userInfo: { aboutme, topExpertise, findme } }) => {
   return (
-    <section class="s2">
-      <div class="main-container">
-        <div class="about-wrapper">
-          <div class="about-me">
+    <section className="s2">
+      <div className="main-container">
+        <div className="about-wrapper">
+          <div className="about-me">
             <h4>More about me</h4>
 
-            <p>
-              I build new projects just to tickle my brain and love teaching
-              others how they're made.
-            </p>
+            <p>{aboutme}</p>
 
             <p>
               While I keep busy teaching courses, I still take interviews in
@@ -23,7 +20,7 @@ const AboutMe = () => {
             <h4>TOP EXPERTISE</h4>
 
             <p>
-              Fullstack developer with primary focus on Django + React:{" "}
+              {topExpertise && topExpertise.title}{" "}
               <a target="_blank" href="resume.pdf">
                 Download Resume
               </a>
@@ -31,33 +28,34 @@ const AboutMe = () => {
 
             <div id="skills">
               <ul>
-                <li>Python</li>
-                <li>Django</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Postgres</li>
-              </ul>
-
-              <ul>
-                <li>Google Maps API</li>
-                <li>JS Charts</li>
-                <li>AWS (RDS/S3)</li>
-                <li>Heroku</li>
-                <li>HTML/CSS</li>
+                {topExpertise &&
+                  topExpertise.programmingLanguage.map((lan) => (
+                    <li key={lan}>{lan}</li>
+                  ))}
               </ul>
             </div>
           </div>
 
-          <div class="social-links">
-            <img id="social_img" src="images/follow.jpg" />
-            <h3>Find me on Twitter & Youtube</h3>
+          <div className="social-links">
+            <img id="social_img" src={findme && findme.image} alt="" />
+            <h3>Find me on Github & Facebook</h3>
 
-            <a target="_blank" href="https://www.youtube.com/c/dennisivy">
-              YouTube: @DennisIvy
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={findme && findme.github}
+              style={{ textDecoration: "underline" }}
+            >
+              Github: @Sanjay-RD
             </a>
             <br />
-            <a target="_blank" href="https://twitter.com/dennisivy11">
-              Twitter: @DennisIvy11
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={findme && findme.facebook}
+              style={{ textDecoration: "underline" }}
+            >
+              Facebook: @Sanjay Rd
             </a>
           </div>
         </div>
