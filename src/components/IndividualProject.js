@@ -8,10 +8,42 @@ const IndividualProject = ({ match }) => {
     (info) => info.id === parseInt(match.params.id)
   );
   console.log(project);
+  console.log(project.description);
   return (
     <div>
       <Header />
-      <h1>IndividualProject</h1>
+      <div class="main-container">
+        <br />
+        <div class="img-container">
+          <img src={project.image} />
+        </div>
+        {project.livedemo && (
+          <h2>
+            LiveDemo : <a href={project.livedemo}>{project.livedemo}</a>{" "}
+          </h2>
+        )}
+        <h3>{project.name}</h3>
+
+        {project.description.map((desc) => (
+          <p>{desc}</p>
+        ))}
+
+        <h5>Technologies:</h5>
+        <ul>
+          {project.technologies.map((projects) => (
+            <li>{projects}</li>
+          ))}
+        </ul>
+
+        {project.moreImage.map((image) => (
+          <div>
+            <h5>{image.imgTitle}</h5>
+            <div class="img-container">
+              <img style={{ width: "70%" }} src={image.image} />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -10,10 +10,10 @@ const AboutMe = ({ userInfo: { aboutme, topExpertise, findme } }) => {
 
             <p>{aboutme}</p>
 
-            <p>
+            {/* <p>
               While I keep busy teaching courses, I still take interviews in
               search of a great team & projects that interest me.
-            </p>
+            </p> */}
 
             <hr />
 

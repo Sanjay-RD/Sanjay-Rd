@@ -46,6 +46,7 @@ input,
 textarea {
   color: var(--secondaryText);
   font-family: "Roboto Mono", monospace;
+  font-size: 17px;
 }
 
 a {
@@ -300,6 +301,10 @@ h6 {
   justify-content: space-evenly; */
   background-color: var(--previewShadow);
   padding: 2px 0px;
+}
+
+.img-container img {
+  width: 80%;
 }
 
 .social-links {

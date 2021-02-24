@@ -1,8 +1,9 @@
 const info = {
   name: "Sanjay RD",
-  whatIDo: "I am a Frontend Developer and make creative sites.",
+  whatIDo:
+    "I am a Frontend Developer,I enjoy making creative sites and learning new programming.",
   aboutme:
-    "I build new projects just to tickle my brain and love teaching others how they're made.While I keep busy teaching courses, I still take interviews in search of a great team & projects that interest me.",
+    "I build new projects just to tickle my brain and love learning new programming language.",
   topExpertise: {
     title: "Fullstack developer with primary focus on Node/Express + React:",
     programmingLanguage: [
