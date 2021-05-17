@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import profile from "./profile.jpg";
 
-const Home = ({ userInfo: { name, whatIDo } }) => {
+const Home = ({ userInfo: { name, whatIDo }, scroolButtom }) => {
   return (
     <section className="s1">
       <div className="main-container">
@@ -11,7 +11,7 @@ const Home = ({ userInfo: { name, whatIDo } }) => {
         </div>
 
         <div className="intro-wrapper">
-          <Header />
+          <Header scroolButtom={scroolButtom} />
 
           <div className="left-column">
             <img id="profile_pic" src={profile} alt="" />

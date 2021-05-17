@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ scroolButtom }) => {
   return (
     <div className="nav-wrapper">
       {/* Link around dots-wrapper added after tutorial video  */}
@@ -15,7 +15,9 @@ const Header = () => {
 
       <ul id="navigation">
         <li>
-          <a href="index.html#contact">Contact</a>
+          <Link to="/" onClick={() => scroolButtom()}>
+            Contact
+          </Link>
         </li>
       </ul>
     </div>

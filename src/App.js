@@ -10,6 +10,7 @@ import info from "./aboutInfo";
 import projectInfo from "./projectInfo";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 function App() {
   const [userInfo, setUserInfo] = useState({});
@@ -18,6 +19,11 @@ function App() {
     setUserInfo(info);
     setProjects(projectInfo);
   }, []);
+
+  const scroolButtom = () => {
+    // console.log("scroolButtom");
+    scroll.scrollToBottom();
+  };
   return (
     <Router>
       <Route
@@ -25,14 +31,22 @@ function App() {
         path="/"
         render={(props) => (
           <React.Fragment>
-            <Home userInfo={userInfo} />
+            <Home userInfo={userInfo} scroolButtom={scroolButtom} />
             <AboutMe userInfo={userInfo} />
             <Project projects={projects} />
             <Contact />
           </React.Fragment>
         )}
       />
-      <Route path="/project/:id" component={IndividualProject} />
+      {/* <Route path="/project/:id" component={IndividualProject} /> */}
+      <Route
+        path="/project/:id"
+        render={(props) => (
+          <React.Fragment>
+            <IndividualProject {...props} />
+          </React.Fragment>
+        )}
+      />
     </Router>
   );
 }
