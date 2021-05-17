@@ -15,7 +15,7 @@ const IndividualProject = ({ match }) => {
       <div class="main-container">
         <br />
         <div class="img-container">
-          <img src={project.image} />
+          <img src={project.image} alt="project.." />
         </div>
         {project.livedemo && (
           <h2>
@@ -39,7 +39,7 @@ const IndividualProject = ({ match }) => {
           <div>
             <h5>{image.imgTitle}</h5>
             <div class="img-container">
-              <img style={{ width: "70%" }} src={image.image} />
+              <img style={{ width: "70%" }} src={image.image} alt="images.." />
             </div>
           </div>
         ))}
