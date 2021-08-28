@@ -1,5 +1,7 @@
 import React from "react";
 
+import pdf from "../Resume.pdf";
+
 const AboutMe = ({ userInfo: { aboutme, topExpertise, findme } }) => {
   return (
     <section className="s2">
@@ -10,18 +12,13 @@ const AboutMe = ({ userInfo: { aboutme, topExpertise, findme } }) => {
 
             <p>{aboutme}</p>
 
-            {/* <p>
-              While I keep busy teaching courses, I still take interviews in
-              search of a great team & projects that interest me.
-            </p> */}
-
             <hr />
 
             <h4>TOP EXPERTISE</h4>
 
             <p>
               {topExpertise && topExpertise.title}{" "}
-              <a target="_blank" href="resume.pdf">
+              <a target="_blank" href={pdf}>
                 Download Resume
               </a>
             </p>
@@ -56,6 +53,15 @@ const AboutMe = ({ userInfo: { aboutme, topExpertise, findme } }) => {
               style={{ textDecoration: "underline" }}
             >
               Facebook: @Sanjay Rd
+            </a>
+            <br />
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={findme && findme.linkedin}
+              style={{ textDecoration: "underline" }}
+            >
+              LinkedIn: Sanjay RD
             </a>
           </div>
         </div>

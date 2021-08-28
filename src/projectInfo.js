@@ -102,6 +102,110 @@ const projectInfo = [
       },
     ],
   },
+  {
+    id: 4,
+    name: "Jutta Pasal",
+    livedemo: "https://juttapasal.herokuapp.com/",
+    intro:
+      "Jutta Pasal is online e-commerce site for buying only shoes of different brand",
+    image: "/images/juttapasal/main.png",
+    description: [
+      "This is a college project, which is a fullstack online service application made using Reactjs, Node, Express, mongoDB",
+      "This application is used for buying online shoes and feature to pay through online, add product to cart, order product, shipping etc. ",
+      "User had the ability to view there order details, edit there profile",
+      "Admin had the ability to view,edit and delete all order,user, product, admin can create new product,edit and delete a product",
+    ],
+    technologies: [
+      "React JS",
+      "Node & Express",
+      "React Bootstrap for css",
+      "MongoDB for database",
+    ],
+    moreImage: [
+      {
+        imgTitle: "Demo One",
+        image: "/images/juttapasal/cart.png",
+      },
+      {
+        imgTitle: "Demo Two",
+        image: "/images/juttapasal/inside.png",
+      },
+      {
+        imgTitle: "Demo Three",
+        image: "/images/juttapasal/userprofile.png",
+      },
+      {
+        imgTitle: "Demo Four",
+        image: "/images/juttapasal/dashboard.png",
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "Game Store",
+    livedemo: "",
+    intro:
+      "Game Store is a simple site where you can buy games, create Blog and read the existing Blog ",
+    image: "/images/gamestore/main.png",
+    description: [
+      "This is a college project, which is a fullstack django application made using Django, HTML, CSS & JS",
+      "This application is used for buying games and have the feature to pay through online, add games to cart, order games, user can create Blog and read the Existing Blog etc. ",
+      "User had the ability to view there order games & blog, edit there profile, edit blog and create new blog",
+      "Admin had the ability to view, edit and delete games, user, blog. Admin can create new game, edit and delete a games",
+    ],
+    technologies: ["Django", "HTML, CSS, JS", "Postgresql for database"],
+    moreImage: [
+      {
+        imgTitle: "Demo One",
+        image: "/images/gamestore/featured.png",
+      },
+      {
+        imgTitle: "Demo Two",
+        image: "/images/gamestore/games.png",
+      },
+      {
+        imgTitle: "Demo Three",
+        image: "/images/gamestore/blog.png",
+      },
+      {
+        imgTitle: "Demo four",
+        image: "/images/gamestore/cart.png",
+      },
+      {
+        imgTitle: "Demo Five",
+        image: "/images/gamestore/dashboard.png",
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: "Room Finder",
+    livedemo: "https://chaiyo1.herokuapp.com/",
+    intro:
+      "It is a online room finding site where you can find room, details, price, contact of the room",
+    image: "/images/roomfinder/main.png",
+    description: [
+      "This is a personal project, which is a fullstack MARN application made using Reactjs, Node & Express, MongoDB",
+      "This application is used for finding room online and have the feature to add room, delete room, search room,user and admin dashboard, query to owner, owner details",
+      "User had the ability to view available room, edit there profile, query to owner and create new rooms",
+      "Admin had the ability to view, edit and delete room  and user. Admin can also create new room, edit and delete a room if needed",
+    ],
+    technologies: ["ReactJS", "Node & Express", "MongoDB for database"],
+    moreImage: [
+      {
+        imgTitle: "Demo One",
+        image: "/images/roomfinder/inside.png",
+      },
+      {
+        imgTitle: "Demo Two",
+        image: "/images/roomfinder/userdashboard.png",
+      },
+      {
+        imgTitle: "Demo Three",
+        image: "/images/roomfinder/adminDashboard.png",
+      },
+    ],
+  },
 ];
 
 export default projectInfo;

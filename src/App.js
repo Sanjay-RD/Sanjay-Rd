@@ -30,12 +30,12 @@ function App() {
         exact
         path="/"
         render={(props) => (
-          <React.Fragment>
+          <>
             <Home userInfo={userInfo} scroolButtom={scroolButtom} />
             <AboutMe userInfo={userInfo} />
             <Project projects={projects} />
             <Contact />
-          </React.Fragment>
+          </>
         )}
       />
       {/* <Route path="/project/:id" component={IndividualProject} /> */}

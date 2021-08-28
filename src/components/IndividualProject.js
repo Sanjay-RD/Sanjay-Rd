@@ -7,8 +7,8 @@ const IndividualProject = ({ match }) => {
   const project = projectInfo.find(
     (info) => info.id === parseInt(match.params.id)
   );
-  console.log(project);
-  console.log(project.description);
+  // console.log(project);
+  // console.log(project.description);
   return (
     <div>
       <Header />
